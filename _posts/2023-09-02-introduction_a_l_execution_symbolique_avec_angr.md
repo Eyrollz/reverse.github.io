@@ -8,7 +8,7 @@ toc: true
 ---
 # Introduction 💭
 
-angr est un **moteur d'exécution symbolique** *open source* qui permet d'analyser et d'émuler des programmes binaires. Il utilise l'exécution symbolique pour explorer toutes les branches d'exécution possibles d'un programme. Il permet, entre autres, de découvrir les vulnérabilités, les bugs et conditions qui permettent d'atteindre certaines parties d'un programme.
+angr est un **moteur d'exécution symbolique** *open source* qui permet d'analyser et d'émuler des programmes binaires. Il utilise l'exécution symbolique pour explorer toutes les branches d'exécution possibles d'un programme. Il permet, entre autres, de découvrir les vulnérabilités, les bugs et conditions qui permettent d'atteindre certaines parties d'un programme. 
 
 L'un des principaux avantages d'angr est sa capacité à analyser les programmes **sans avoir besoin de les exécuter réellement**. Cela permet d'éviter les problèmes de sécurité (exemple : *malware*) et d'analyser plus facilement un bout de code sans avoir à l'exécuter. 
 
