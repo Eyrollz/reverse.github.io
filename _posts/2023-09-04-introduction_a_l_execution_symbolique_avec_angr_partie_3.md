@@ -6,7 +6,7 @@ tags: [angr, Exécution symbolique]     # TAG names should always be lowercase
 author: kabeche
 toc: true
 ---
-## Utiliser les hooks comme un pro
+## Utiliser les hooks comme un pro 💪
 
 Si vous n'avez pas la mémoire trop courte, vous devriez vous rappeler de la manière dont on avait utilisé un *hook*. Pour rappel on avait fait un truc du genre :
 
@@ -47,14 +47,14 @@ class MyPuts(angr.SimProcedure):
 p.hook_symbol('puts', MyPuts())
 ```
 
-> Dans les arguments de `hook` et `hook_symbol`, lorsqu'une classe dérivée de `SimProcedure` est utilisée, il faut absolument mettre les parenthèses sinon angr risque d'être ... angry (:
+> Dans les arguments de `hook` et `hook_symbol`, lorsqu'une classe dérivée de `SimProcedure` est utilisée, il faut absolument mettre les parenthèses sinon angr risque d'être ... angry 🙃
 {: .prompt-warning }
 
 Pour pouvoir utiliser les `SimProcedures`, il faut toujours déclarer sa classe dérivée de la sorte : `MaClasse(angr.SimProcedure)`. Cela permet par la suite d'avoir accès à certaines **fonctions pré-établies** telle que `run` qui est la fonction exécutée lorsque notre *hook* sera déclenché. 
 
 Maintenant, il va bien falloir remplir cette fonction `run`, qu'allons-nous mettre ?
 
-> Bah c'est simple on a qu'à faire `print(addr_str)`
+> Bah c'est simple on a qu'à faire `print(addr_str)` 🙄
 {: .prompt-info }
 
 Bien tenté mais cela ne fonctionnera pas ! En fait il faut voir l'argument `addr_str` comme l'argument de `puts` en C. Or l'argument de `puts` est une chaîne de caractère, plus précisément, **un pointeur vers une zone mémoire** contenant des caractères dont la fin est signalée par un octet nul.
@@ -157,7 +157,7 @@ Hooker des fonctions de la libc est chose aisée car :
 - soit angr le fait déjà
 - soit on a accès au symbole (et donc on peut récupérer l'adresse de la fonction via son nom) que le programme soit strippé ou non
 
-Toutefois, lorsque le programme est **strippé** (les symboles des fonctions internes sont supprimés), on a **plus accès** au nom des fonctions internes. Même le `main` n'est plus accessible directement via son symbole avec `main = p.loader.find_symbol("main")` :'(.
+Toutefois, lorsque le programme est **strippé** (les symboles des fonctions internes sont supprimés), on a **plus accès** au nom des fonctions internes. Même le `main` n'est plus accessible directement via son symbole avec `main = p.loader.find_symbol("main")` 😢.
 
 Dans une telle situation, lorsque l'on veut *hooker* une fonction `fun_prgrm` du programme, on a deux manières de faire :
 
@@ -168,7 +168,7 @@ On a déjà été confronté au premier cas, et on sait gérer. Mais comment fai
 
 Dans le second cas, il y a deux manières de faire :
 
-1. **Utiliser un hook classique** : c'est **laborieux** car il faut calculer la taille de la fonction, sortir de la fonction nous même en modifiant `rip` avec la valeur idoine ...
+1. **Utiliser un hook classique** : c'est **laborieux** car il faut calculer la taille de la fonction, sortir de la fonction nous même en modifiant `rip` avec la valeur idoine 🥱 ...
 2. **Utiliser une classe dérivée de** `SimProcedure` : il s'agit de la méthode la **plus simple** car on n'aura pas besoin de calculer la taille de la fonction ni même besoin de retourner nous-même ; angr le fait déjà pour nous
 
 #### Utiliser un hook classique
@@ -202,11 +202,11 @@ p.hook(0x401149, MyFunc())
 
 ## Les limites d'angr
 
-Après avoir vu les principales fonctionnalités qu'offre angr, vous vous dites sûrement que vous allez pouvoir enfin **démolir** tous les crackmes et **reverse bien plus aisément** n'importe quel programme. Eh bien malheureusement ce n'est pas aussi simple que cela car angr a tout de même pas mal de limitation...
+Après avoir vu les principales fonctionnalités qu'offre angr, vous vous dites sûrement que vous allez pouvoir enfin **démolir** tous les crackmes et **reverse bien plus aisément** n'importe quel programme. Eh bien malheureusement ce n'est pas aussi simple que cela car angr a tout de même pas mal de limitation 🫣 ...
 
 ![](/assets/images/introduction_a_l_execution_symbolique_avec_angr/meme_jimmy__.jpg)
 
-### Moteur d'exécution codé en Python
+### Moteur d'exécution codé en Python 🐍
 
 L'une des **faiblesse majeure** d'angr face à d'autres outils d'exécution symbolique tels que [Triton](https://github.com/JonathanSalwan/Triton) ou [Binsec](https://github.com/binsec/binsec) est qu'il est codé totalement en **Python**.
 
@@ -214,7 +214,7 @@ Ainsi, même le moteur d'exécution est codé en Python contrairement à d'autre
 
 Python c'est chouette, c'est simple mais qu'est-ce que c'est lent ^^' !
 
-### L'explosion de chemin
+### L'explosion de chemin 💥
 
 On en a brièvement parlé mais il s'agit d'**un des plus gros problèmes** de l'exécution symbolique. Cela ne concerne pas seulement angr mais n'importe quel moteur d'exécution symbolique.
 
@@ -307,7 +307,7 @@ En lançant le script Python, on constate qu'il consomme de plus en plus de mém
 Puis après quelques secondes / minutes d'exécution :
 ![](/assets/images/introduction_a_l_execution_symbolique_avec_angr/sec.png)
 
-On constate de que le script consomme **énormément de mémoire** et comme on a pas envie que le PC finisse par *freeze*, on utilise l'arme fatale du Ctrl+C.
+On constate de que le script consomme **énormément de mémoire** et comme on a pas envie que le PC finisse par *freeze* 🥶, on utilise l'arme fatale du Ctrl+C 🔫.
 
 Un terminal IPython s'ouvre alors et on peut analyser ce qu'il se passe. Essayons de voir ce que contient le simulation manager qui, pour rappel, gère tous les états.
 
@@ -321,7 +321,7 @@ Cet exemple vous permet de comprendre la principale limite de l'exécution symbo
 
 ### Les bibliothèques externes
 
-Une autre faiblesse d'angr est qu'il **gère mal** les bibliothèques un peu complexes. Autant pour la libc certaines fonctions comme `printf`, `read` etc., ça, il sait faire. Autant des fonctions comme celles de l'API Windows, il galère davantage.
+Une autre faiblesse d'angr est qu'il **gère mal** les bibliothèques un peu complexes. Autant pour la libc certaines fonctions comme `printf`, `read` etc., ça, il sait faire. Autant des fonctions comme celles de l'API Windows, il galère davantage 🤕.
 
 De ce fait, lorsque l'on analyse un programme Windows avec angr (par exemple, un *malware*), il va falloir *hooker* pas mal de fonction pour que le script n'aille pas dans les choux.
 
@@ -337,14 +337,14 @@ Evidemment, c'est une liste assez subjective et ce n'est pas parce que l'on a cl
 
 Dans l'idéal il s'agit de regarder au cas par cas l'objectif attendu et la manière dont est conçu le binaire ( programme, firmware ...) à analyser.
 
-#### Les cas favorables
+#### Les cas favorables ✅
 
 - **Un crackme** qui utilise un algo assez linéaire avec des opérations simples (xor, add,sub ...)
 - **Un programme Linux** : oui angr a un peu plus de mal avec les programmes Windows ( notamment les bibliothèques utilisées)
 - **Un bout d'assembleur** : cela peut être une fonction ou simplement un bout de code désassemblé dont vous souhaitez comprendre le fonctionnment. angr permet en effet de charger directement de l'assembleur et de l'exécuter.
 - **Désobfuscation classique** : sachez qu'il est possible de désobfusquer de manière efficace un programme avec angr. Cela demandera peut-être des notions avancées mais angr dispose d'un panel d'outils qui, utilisés ensemble, peuvent permettre de désobfusquer un programme. Cela étant, on parle ici d'obfuscation classique (switch table linéaire, prédicats opaques, MBA ...) et pas d'obfuscation poussée (switch tables non linéaires, nécessité d'exécuter en dynamique ...)
 
-#### Les cas défavorables
+#### Les cas défavorables ⚠️
 
 - **Les programmes Windows** : cf la raison plus haut. Evidemment cela ne veut pas dire qu'il n'est pas possible d'utiliser angr sur un *malware* (et c'est parfois utile d'ailleurs), mais c'est juste qu'il va falloir faire attention à la manière dont vous configurez angr.
 - **Un programme qui fait trop souvent appel à des fonctions externes** : typiquement les programmes Windows qui font 1000 appels aux fonctions de l'API Windows

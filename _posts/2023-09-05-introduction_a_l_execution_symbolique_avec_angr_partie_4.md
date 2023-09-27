@@ -22,7 +22,7 @@ En attendant, il faut absolument que vous sachiez vous documenter concernant l'u
 
 ### La documentation officielle d'angr
 
-Bah pour se documenter, on peut déjà utiliser la doc'.
+Bah pour se documenter, on peut déjà utiliser la doc' 🥸.
 
 ![](/assets/images/introduction_a_l_execution_symbolique_avec_angr/merci_sherlock.png)
 
@@ -37,7 +37,7 @@ En cliquant sur le premier lien, on obtient la description des différents argum
 
 ![](/assets/images/introduction_a_l_execution_symbolique_avec_angr/args_entry_state.png)
 
-> C'est normal que le site soit très lent ?
+> C'est normal que le site soit très lent 🥵 ?
 {: .prompt-info }
 
 Oui malheureusement le site **assez lent** lorsque l'on fait des recherche... J'ai l'impression que le souci est que la page charge longtemps. Je vous conseille de stopper le chargement de la page une fois que celle-ci semble être chargée correctement puis de faire un Ctrl+F sur la fonction (ou autre) recherchée.
@@ -48,7 +48,7 @@ On en a déjà parlé je ne vais pas refaire une partie à ce sujet, je vous inv
 
 Néanmoins, je souhaite tout de même rappeler que dans un terminal IPython, lorsque l'on saisit une expression du style `objet.` puis que vous appuyez sur TAB, cela vous affichera les **méthodes** et **attributs** de l'objet en question.
 
-### Utiliser un moteur de recherche spécialisé dans la recherche de code
+### Utiliser un moteur de recherche spécialisé dans la recherche de code 🔎
 
 C'est une **méthode de recherche** dont j'ai appris l'existence que très tard malheureusement (merci CharlB au passage). 
 
@@ -64,7 +64,7 @@ Voici les deux principaux (il y en a sûrement d'autres) :
 En utilisant **grep.app** pour chercher des informations concernant `entry_state`, voici ce que l'on peut obtenir comme résultats :
 ![](/assets/images/introduction_a_l_execution_symbolique_avec_angr/grep_app_result.png)
 
-Voilà ! Vous n'avez plus d'excuses pour ne pas devenir des pros d'angr !
+Voilà ! Vous n'avez plus d'excuses pour ne pas devenir des pros d'angr 💪 !
 
 ### Utiliser ChatGPT
 

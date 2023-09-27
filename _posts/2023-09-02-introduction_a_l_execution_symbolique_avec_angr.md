@@ -6,7 +6,7 @@ tags: [angr, Exécution symbolique]     # TAG names should always be lowercase
 author: kabeche
 toc: true
 ---
-# Introduction
+# Introduction 💭
 
 angr est un **moteur d'exécution symbolique** *open source* qui permet d'analyser et d'émuler des programmes binaires. Il utilise l'exécution symbolique pour explorer toutes les branches d'exécution possibles d'un programme. Il permet, entre autres, de découvrir les vulnérabilités, les bugs et conditions qui permettent d'atteindre certaines parties d'un programme.
 
@@ -16,7 +16,7 @@ angr est utilisé dans de nombreux domaines de la sécurité informatique, tels 
 
 Il est compatible avec de nombreuses architectures de processeurs et prend en charge de nombreux formats de fichiers binaires.
 
-Ah oui au fait, en termes de **prononciation** :
+Ah oui au fait, en termes de **prononciation** 🤓:
 
 ![angueur_pas_angr](/assets/images/introduction_a_l_execution_symbolique_avec_angr/leviosa.gif)
 
@@ -160,7 +160,7 @@ Voici grossomodo le contenu des trois précédents états :
 
 ![](/assets/images/introduction_a_l_execution_symbolique_avec_angr/screen/chemin_div.png)
 
-> Mais la contrainte portait sur `[rbp+var_4]` pourquoi est-elle maintenant sur `eax_val`.
+> Mais la contrainte portait sur `[rbp+var_4]` pourquoi est-elle maintenant sur `eax_val` ?
 {: .prompt-info }
 
 Certes la contrainte porte sur la valeur contenu à `[rbp+var_4]`, mais quelle variable est à l'origine de `[rbp+var_4]` ?
@@ -243,7 +243,7 @@ solveur.add(equation_2)
 ```
 
 Les contraintes sur `x` n'étant pas satisfaisables, l'exécution du script retourne `Pas de solution trouvée.`.
-L'idée n'étant pas de savoir utiliser de **manière avancée** z3 (angr le fera pour nous ;) ) mais de comprendre à quoi sert un solveur et comment les utiliser.
+L'idée n'étant pas de savoir utiliser de **manière avancée** z3 (angr le fera pour nous 🤭 ) mais de comprendre à quoi sert un solveur et comment les utiliser.
 
 ### Utilisation d'angr
 
@@ -283,8 +283,8 @@ C'est ce gros "truc" qui va **gérer tous nos états** lors de l'exécution symb
 5. **unsat** : Un état "unsat" (insatisfaisable) est un chemin d'exécution qui mène à une contradiction ou à une condition impossible à satisfaire. Cela se produit généralement lorsqu'une condition de programme invalide est rencontrée, ce qui signifie qu'angr ne peut pas explorer ce chemin d'exécution plus loin.
 
 Voici un exemple dans lequel le SM (Simulation Manager) contient seulement deux états :
-- un état de type **found**
-- un état de type **avoid** 
+- un état de type **found** 🟢
+- un état de type **avoid** 🔴
 
 ![](/assets/images/introduction_a_l_execution_symbolique_avec_angr/found_avoid.png)
 
@@ -350,7 +350,7 @@ Dans le code exécuté, angr va agir de la sorte :
 
 Ce qui est intéressant avec les fonctions de *hook* est qu'elles peuvent disposer, en paramètre, de l'**état** (ici `state`) **courant** lorsque le *hook* a été déclenché. Cela est énormément pratique pour **consulter la valeur des registres**, les **modifier**, **inspecter la mémoire**, la *stack* etc.
 
-Pour l'instant, la fonction de hook est vide, elle ne fait rien. Remplissons-là ! 
+Pour l'instant, la fonction de hook est vide, elle ne fait rien. Remplissons-là ✏️! 
 
 On sait que la fonction `atoi` convertit une chaîne de caractères en un entier. Ce que l'on aurait pu faire pour garder le même fonctionnement de `atoi` est d'utiliser la variable `argv` de Python pour retourner un entier arbitraire, choisi au moment du lancement du script.
 
@@ -418,11 +418,11 @@ Désormais, angr sait que la valeur de retour est symbolique, la comparaison ave
 > Si on voulait optimiser le script, on aurait pu seulement retourner une valeur de 32 bits via `eax` étant donné que seule les 4 premiers octets de `rax` sont utilisés pour la comparaison.
 {: .prompt-tip }
 
-> Mais attends, tu nous as pas dit pourquoi il y a un 36000 mille messages de *warning* ?
+> Mais attends, tu nous as pas dit pourquoi il y a un 36000 mille messages de *warning* 😵‍💫?
 {: .prompt-info }
 
 En fait les différents *warnings* que l'on a pas traités concernent des zones mémoire que nous n'avons pas initialisées et qui sont manipulées par le programme. Par exemple, les premières instructions de la fonction `main` sont :
-```asm
+```nasm
 0000000000401122   push    rbp
 0000000000401123   mov     rbp, rsp
 ```
@@ -453,7 +453,7 @@ Cela peut être utile lorsque l'on veut absolument avoir les mêmes adresses mé
 
 #### Récupération de l'entrée valide
 
-On a pu faire en sorte qu'angr **atteigne** l'adresse du bloc où la comparaison est réalisée correctement. Néanmoins, angr ne nous as pas dit avec quelle entrée valide il a pu en arriver là. Je vous rassure, on y est presque !
+On a pu faire en sorte qu'angr **atteigne** l'adresse du bloc où la comparaison est réalisée correctement. Néanmoins, angr ne nous as pas dit avec quelle entrée valide il a pu en arriver là. Je vous rassure, on y est presque 😅!
 
 Pour rappel, le simulation manager `sm` a pu avoir au moins un état `found`. Il suffit désormais de :
 

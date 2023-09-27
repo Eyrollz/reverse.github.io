@@ -98,9 +98,9 @@ Et comme on l'a vu un peu plus haut, cela permet de voir la liste des états act
 
 Etant donné qu'habituellement `Ctrl+C` est utilisé pour tuer un processus et que l'on intercepte le signal en question, ce raccourcis ne permettra plus de tuer le processus. C'est pourquoi il faudra saisir `kill()` dans IPython pour terminer le programme Python.
 
-A utiliser sans modération !
+A utiliser sans modération 😇!
 
-## La lecture et écriture en mémoire
+## La lecture et écriture en mémoire 📝
 
 Si vous avez en tête le précédent chapitre, vous devriez vous rappeler de la manière dont on a pu accéder aux registres. Par exemple, pour accéder au registre `rax`, nous pouvons utiliser `state.regs.rax`. 
 
@@ -110,11 +110,11 @@ Nous avons pas encore vu comment **accéder aux zones mémoire** en lecture et �
 
 Voici comment cela se fait :
 
-- **Lecture en mémoire** : `state.memory.load(adresse, taille)` où :
+- 📄 **Lecture en mémoire** : `state.memory.load(adresse, taille)` où :
 	- `adresse` est un entier qui représente l'adresse à partir de laquelle angr va lire
 	- `taille` est un entier qui représente la taille des données en **octets** que l'on souhaite lire
 	- **Retour** : le retour de la fonction est un BitVector, symbolique ou non ( par exemple, si la zone mémoire contient les 4 octets `0xdeadbeef`, le résultat retourné sera : `<BV32 0xdeadbeef>`)
-- **Ecriture en mémoire** : `state.memory.store(adresse,données)` où :
+- ✏️ **Ecriture en mémoire** : `state.memory.store(adresse,données)` où :
 	- `adresse` est un entier qui représente l'adresse à partir de laquelle angr va lire
 	- `données` peut être de type `bytes`, `BVV` (données concrètes) ou `BVS` (données symboliques)
 
@@ -154,13 +154,13 @@ Maintenant que vous savez comment lire et écrire en mémoire, je vous conseille
 
 Ça vous sera utile quand vous souhaiterez déboguer un programme avec angr. 
 
-## Gérer l'input et l'output
+## Gérer l'input ⤵️ et l'output ⤴️
 
 Parfois, il peut être plus simple d'utiliser directement l'entrée (***input***) et sortie (***output***) standards au lieu de *hooker* certaines fonctions et complexifier le script de résolution.
 
 Par exemple, dans l'exercice du précédent chapitre, on sait que si l'*output* est `Win !` alors c'est que l'entrée est valide.
 
-### Lecture de l'output
+### Lecture de l'output ⤴️
 
 La lecture de l'*output* depuis un état se fait de la sorte :
 ```python
@@ -199,7 +199,7 @@ L'utilisation de l'*output* n'est pas toujours la meilleure solution. En fait, t
 
 Dans un tel cas cela peut être intéressant d'utiliser l'output car vous savez ce que le programme devrait afficher. Mais généralement, il vaut mieux savoir exactement où on doit aller et comment on doit le faire. La méthode des strings est généralement efficace dans des programmes simples et basiques mais demande **plus de réflexion** le cas échéant.
 
-### Utilisation de l'input
+### Utilisation de l'input ⤵️
 
 Assez parlé de l'output, passons à l'**input** (ou entrée standard) !
 
@@ -403,4 +403,4 @@ int main() {
 
 Pour le compiler : `gcc -no-pie main.c -o exe`.
 
-**Indice** : aucun *hook* n'est nécessaire pour la réussite de cet exercice ;) !
+**Indice** : aucun *hook* n'est nécessaire pour la réussite de cet exercice 😉 !

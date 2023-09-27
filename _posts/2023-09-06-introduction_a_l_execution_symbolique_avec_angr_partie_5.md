@@ -16,9 +16,9 @@ Plusieurs exercices ont été proposés dans ce cours. Cette section comporte de
 > Il suffit de les adapter en fonction de ce que vous avez comme adresses dans le code désassemblé.
 {: .prompt-warning }
 
-> Il n'est pas très utile de regarder les solutions aux exercices si vous n'avez pas cherché par vous même à une manière de résoudre l'exercice, vous n'apprendrez pas grand chose ...
+> Il n'est pas très utile de regarder les solutions aux exercices si vous n'avez pas cherché par vous même à une manière de résoudre l'exercice, vous n'apprendrez pas grand chose 😅 ...
 {: .prompt-tip }
-## Exercice 1 - Introduction
+## Exercice 1️⃣ - Introduction
 
 ### Objectif
 Trouver le bon input de ce programme :
@@ -109,7 +109,7 @@ else :
 
 Ce qui posait problème dans ce script était principalement la fonction `strtoull`. Il s'agit d'une fonction qui ressemble à `atoi` mais qui retourne un entier de 64 bits. On l'a donc *hookée* afin qu'angr puisse poursuivre l'exécution sans problème.
 
-Pas besoin de *hook* `puts` et `read` qui sont *hookées* de base par angr.
+Pas besoin de *hook* `puts` et `read` qui sont *hookées* correctement de base par angr.
 
 ### Résultat
 ```
@@ -128,7 +128,7 @@ WARNING  | 2023-09-16 15:30:04,502 | angr.storage.memory_mixins.default_filler_m
 [+] Le bon input est :  0x3133353739515355
 ```
 
-## Exercice 2 - Lecture de la stack
+## Exercice 2️⃣ - Lecture de la stack
 ### Objectif 
 
 Ecrire une fonction`read_from_stack(state,n)` qui affiche les `n` première valeurs ( de 64 bits par ex) sur la stack de l'état `state`.
@@ -184,7 +184,7 @@ Valeur 4: <BV64 0x0>
 Valeur 5: <BV64 0x19>
 ```
 
-## Exercice 3 - Gestion de l'input et output
+## Exercice 3️⃣ - Gestion de l'input et output
 
 ### Objectif
 
@@ -308,7 +308,7 @@ WARNING  | 2023-09-16 15:03:47,479 | angr.storage.memory_mixins.default_filler_m
 [+] Le bon input est :  USQ97531
 ```
 
-## Exercice 4 - Gestion des fichiers
+## Exercice 4️⃣ - Gestion des fichiers
 ### Objectif
 Le programme suivant lit depuis un fichier des données afin de les valider ou non. A vous de trouver le contenu adéquat grâce à angr !
 
