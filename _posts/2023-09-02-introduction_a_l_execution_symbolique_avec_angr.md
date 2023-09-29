@@ -18,7 +18,7 @@ Il est compatible avec de nombreuses architectures de processeurs et prend en ch
 
 Ah oui au fait, en termes de **prononciation** 🤓:
 
-![angueur_pas_angr]({{ "/assets/images/introduction_a_l_execution_symbolique_avec_angr/leviosa.gif" | relative_url }})
+![angueur_pas_angr]("/assets/images/introduction_a_l_execution_symbolique_avec_angr/leviosa.gif")
 
 
 ## Les différents types d'analyse
