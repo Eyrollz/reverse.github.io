@@ -1,5 +1,7 @@
 ---
-layout: default
+layout: page
+title: Accueil
+order: 1
 ---
 
 # Bienvenue !
