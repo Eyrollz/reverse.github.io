@@ -25,3 +25,13 @@ Malheureusement le reverse peut également être utilisé pour **cracker** des p
 Si tu es intéressé pour **partager du contenu** sur la plateforme, n'hésite pas à nous contacter 😜 !
 
 Sur ce, bonne lecture 📖 !
+
+## ✅ Cours disponibles
+
+- [Introduction au reverse](https://reverse.zip/categories/introduction-au-reverse/)
+- [Introduction à l'exécution symbolique avec angr](https://reverse.zip/categories/introduction-%C3%A0-l-ex%C3%A9cution-symbolique-avec-angr/) 
+
+## ⚒️ Cours à venir
+
+- L'analyse d'applications Android
+- L'analyse de *malwares*
