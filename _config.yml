@@ -29,7 +29,7 @@ description: >- # used by seo meta and the atom feed
 url: 'https://reverse.zip'
 
 github:
-  username: Eyrollz # change to your github username
+  username: Eyrollz/reverse.github.io # change to your github username
 
 twitter:
   username: ReverseZip # change to your twitter username
