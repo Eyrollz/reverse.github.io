@@ -19,7 +19,7 @@ La rétro-ingénierie, ou ingénierie inversée, est l'activité qui consiste 
 
 C'est assez concis mais peut être un peu trop vague pour cerner réellement ce qu'est le *reverse*. Je vous propose une analogie plus terre-à-terre, et j'espère que vous aimez la cuisine 👨‍🍳 !
 
-Tout d'abord avant le comprendre ce qu'est le *reverse* en informatique, comprenons comment fonctionne globalement la programmation et compilation d'un programme.
+Tout d'abord avant de comprendre ce qu'est le *reverse* en informatique, comprenons comment fonctionne globalement la programmation et compilation d'un programme.
 ### La réalisation d'un programme
 
 Un programmeur, c'est finalement comme un cuisinier, il a différents ingrédients à disposition que l'ordinateur lui offre : un éditeur de texte, de la puissance de calcul, des bibliothèques prêtes à être utilisées etc.
