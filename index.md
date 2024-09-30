@@ -33,5 +33,6 @@ Sur ce, bonne lecture 📖 !
 
 ## ⚒️ Cours à venir
 
-- L'analyse d'applications Android
+- Introduction au pwn 
+- L'analyse d'applications Android 
 - L'analyse de *malwares*
