@@ -48,6 +48,7 @@ Cependant, l'assembleur étant le langage le plus bas niveau, il est utilisé da
 A titre d'exemple, le récent projet [dav1d](https://github.com/videolan/dav1d) qui est un décodeur du codec **AV1** dispose de plus de 200 000 lignes d'assembleur 🤯 ! 
 
 ![](/assets/images/introduction_au_reverse/lot_of_asm.png)
+
 Sur l'émission **Underscore_** de Micode, ils [expliquent](https://youtu.be/Kv4FzAdxclA?feature=shared&t=900) que ce choix leur permet d'atteindre un facteur **x10** en termes de rapidité.
 
 Comme quoi, l'assembleur a de beaux jours devant lui 😎 !

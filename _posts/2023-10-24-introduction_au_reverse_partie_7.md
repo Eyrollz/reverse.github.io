@@ -193,7 +193,7 @@ Enfin, la *stack frame* de `discriminant` est la suivante :
 
 ![](/assets/images/introduction_au_reverse/pile_10_bis.png)
 
-> On aurait pu, sur le schéma, inclure `Adresse de retour` dans la *stack frame* de `discriminant`. Le choix de ne pas l'inclure permet de garder en tête que la *stack frame* courante est tout l'espace compris entre les valeurs pointées par `esp` (qui en délimite le haut) et `esp` (qui en délimite la base)
+> On aurait pu, sur le schéma, inclure `Adresse de retour` dans la *stack frame* de `discriminant`. Le choix de ne pas l'inclure permet de garder en tête que la *stack frame* courante est tout l'espace compris entre les valeurs pointées par `esp` (qui en délimite le haut) et `ebp` (qui en délimite la base)
 {: .prompt-tip }
 
 > J'ai pas très bien compris pourquoi on étend la pile de 16 (`0x10`) octets alors que l'on a qu'une seule variable locale `int result` qui est de 4 octets ?
