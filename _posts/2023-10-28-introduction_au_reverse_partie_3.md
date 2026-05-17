@@ -22,27 +22,28 @@ Lorsqu'un programme est exécuté par l'OS, il devient ce que l'on appelle  : un
 
 Tout d'abord il faut que `xclock` soit installé sur votre machine. Si ce n'est pas le cas, vous pouvez l'installer via le paquet `x11-apps`. Sous une distro Debian-like : `sudo apt install x11-apps`.
 
-Ensuite ouvrez un terminal et saisissez la commande suivante : `xclock -bg blue&;xclock -bg white&;xclock -bg red&;`. Cela va lancer en arrière-plan 3 instances (processus) du programme `xclock` avec des couleurs différentes.
+Ensuite ouvrez un terminal et saisissez la commande suivante : `xclock -bg red & xclock -bg black & xclock -bg white & xclock -bg green &`. Cela va lancer en arrière-plan 4 instances (processus) du programme `xclock` avec des couleurs différentes.
 
 Vous devriez obtenir quelque chose semblable à cela : 
 
 ![](/assets/images/introduction_au_reverse/xclocks.png)
 
-A ce stade là, ces 3 processus `xclock` tournent en mémoire. Maintenant, que se passe-t-il si on tente de supprimer le programme `xclock` ?
+A ce stade là, ces 4 processus `xclock` tournent en mémoire. Maintenant, que se passe-t-il si on tente de supprimer le programme `xclock` ?
 
 Pour cela, il faut d'abord trouver où il est installé avec `which xclock`. Par exemple `/usr/bin/xclock`. Ensuite, avant de supprimer le programme, faisons tout de même un copie avec `cp /usr/bin/xclock /tmp/copie_de_xlcock`.
 
 Une fois que la copie est faite, supprimons le programme avec `sudo rm /usr/bin/xclock`. Maintenant pour vérifier que le programme a bien été supprimé, lançons `xclock` dans un terminal et là, on obtient l'erreur `command not found: xclock`.
 
-> Mais pourquoi les 3 instances de `xclock` sont toujours en cours d'exécution alors que l'on a supprimé le programme ?
+> Mais pourquoi les 4 instances de `xclock` sont toujours en cours d'exécution alors que l'on a supprimé le programme ?
 {: .prompt-info }
 
-Justement ! Nous avons **supprimé le programme** qui était présent dans notre **disque**. Mais cela n'affecte pas les processus qui eux, sont **exécutés indépendamment en mémoire**. D'ailleurs si vous fermez un des trois processus, cela ne fermera pas les autres qui continueront de fonctionner.
+Justement ! Nous avons **supprimé le programme** qui était présent dans notre **disque**. Mais cela n'affecte pas les processus qui eux, sont **exécutés indépendamment en mémoire**. D'ailleurs si vous fermez un des quatre processus, cela ne fermera pas les autres qui continueront de fonctionner.
 
 Cela signifie donc que les **instructions exécutées** par le processeur lorsqu'un processus est lancé sont **situées en mémoire**. 
 
 > N'oubliez pas de restaurer la copie de `xclock` avec `sudo cp /tmp/copie_de_xlcock /usr/bin/xclock` 
 {: .prompt-tip }
+
 ## Le format ELF
 
 ![](/assets/images/introduction_au_reverse/no_elfes.png)

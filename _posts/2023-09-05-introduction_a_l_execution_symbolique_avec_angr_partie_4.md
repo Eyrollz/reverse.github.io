@@ -75,3 +75,5 @@ En revanche, si on lui demande un script beaucoup trop complexe il risque de se 
 Néanmoins pour des scripts basiques ou pour des commandes dont on a oublié l'utilisation, c'est vraiment très utile ( exemple si on a oublié comment faire de la lecture/écriture en mémoire : `Fais moi un script qui lit 10 octets à telle adresse puis écrit 8 octets à telle autre adresse, le tout en little endian`).
 
 Il faut donc voir ChatGPT comme un outil qui permet de poser, grosso modo, les premières briques de notre script qu'il va falloir finir à la mano. Lui demander des choses trop complexes, est, à mon sens, risqué car il est possible de perdre plus de temps à le corriger qu'en faisant le script soi-même.
+
+Dieu sait mieux.

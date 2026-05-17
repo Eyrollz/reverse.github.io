@@ -6,6 +6,9 @@ tags: [angr, Exécution symbolique]     # TAG names should always be lowercase
 author: kabeche
 toc: true
 ---
+
+Au nom de Dieu, le Tout Miséricordieux, le Très Miséricordieux.
+
 # Introduction 💭
 
 angr est un **moteur d'exécution symbolique** *open source* qui permet d'analyser et d'émuler des programmes binaires. Il utilise l'exécution symbolique pour explorer toutes les branches d'exécution possibles d'un programme. Il permet, entre autres, de découvrir les vulnérabilités, les bugs et conditions qui permettent d'atteindre certaines parties d'un programme. 

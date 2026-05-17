@@ -63,3 +63,4 @@ Je remercie évidemment le Tout Miséricordieux qui nous a facilité la rédacti
 
 J'espère que toutes les notions que vous avez apprises lors de ce cours seront utilisées à **bon escient** et de **manière éthique** afin de faire avancer les choses dans le **bon sens**. Âmin.
 
+Dieu sait mieux.

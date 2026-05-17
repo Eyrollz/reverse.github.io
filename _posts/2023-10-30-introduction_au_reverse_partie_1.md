@@ -7,6 +7,8 @@ author: kabeche
 toc: true
 ---
 
+Au nom de Dieu, le Tout Miséricordieux, le Très Miséricordieux.
+
 # Introduction
 
 ## Qu'est-ce que le reverse ?
