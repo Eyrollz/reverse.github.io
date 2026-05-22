@@ -16,7 +16,7 @@ Au nom de Dieu, le Tout Miséricordieux, le Très Miséricordieux.
 Selon le bon vieux [Wikipedia](https://fr.wikipedia.org/wiki/R%C3%A9tro-ing%C3%A9nierie), la définition de *reverse* (ou rétro-ingénierie 🇫🇷) est :
 
 ```
-La rétro-ingénierie, ou ingénierie inversée, est l'activité qui consiste à étudier un objet pour en déterminer le fonctionnement interne. On parle également de rétro-conception dans le domaine du vivant. Le terme équivalent en anglais est reverse engineering.
+La rétro-ingénierie, ou ingénierie inversée, est l'activité qui consiste à étudier un objet pour en déterminer le fonctionnement interne. On parle également de rétro-conception dans le domaine du vivant. Le terme équivalent en anglais est reverse engineering.
 ```
 
 C'est assez concis mais peut être un peu trop vague pour cerner réellement ce qu'est le *reverse*. Je vous propose une analogie plus terre-à-terre, et j'espère que vous aimez la cuisine 👨‍🍳 !

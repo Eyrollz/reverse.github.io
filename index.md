@@ -28,11 +28,12 @@ Sur ce, bonne lecture 📖 !
 
 ## ✅ Cours disponibles
 
-- [Introduction au reverse](https://reverse.zip/categories/introduction-au-reverse/)
-- [Introduction à l'exécution symbolique avec angr](https://reverse.zip/categories/introduction-%C3%A0-l-ex%C3%A9cution-symbolique-avec-angr/) 
+- [Introduction au pwn](https://reverse.zip/categories/introduction-au-pwn/) (30 chapitres)
+- [Exploitation de la heap](https://reverse.zip/categories/exploitation-de-la-heap/) (24 chapitres)
+- [Introduction au reverse](https://reverse.zip/categories/introduction-au-reverse/) (25 chapitres)
+- [Introduction à l'exécution symbolique avec angr](https://reverse.zip/categories/introduction-%C3%A0-l-ex%C3%A9cution-symbolique-avec-angr/) (5 chapitres)
 
 ## ⚒️ Cours à venir
 
-- Introduction au pwn 
 - L'analyse d'applications Android 
 - L'analyse de *malwares*

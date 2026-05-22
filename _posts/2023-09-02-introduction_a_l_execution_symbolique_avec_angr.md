@@ -392,7 +392,7 @@ En exécutant cette version du script, on obtient après quelques *warnings* :
 ```
 [i] La fonction atoi a été hookée  
 [+] Arrivé à destination  
-[+] Chemins explorés :  <SimulationManager with 1 found, 1 avoid>
+[+] Chemins explorés :  <SimulationManager with 1 found, 1 avoid>
 ```
 Tout s'est bien passé comme prévu et angr a pu parcourir deux chemins au total :
 
@@ -506,7 +506,7 @@ En exécutant ce script, on obtient bien le bon *input* !
 [i] La fonction atoi a été hookée  
 [+] Arrivé à destination  
 [+] Détermination de l'input valide  
-[+] Le bon input est :  0xdeadbeef
+[+] Le bon input est :  0xdeadbeef
 ```
 Maintenant, passons à l'explication des différentes étapes :
 1. Tout d'abord, on vérifie qu'il y a au moins un état qui est arrivé à destination (bloc vert), sinon, on quitte
