@@ -2,7 +2,7 @@
 title: Partie 2 - Fonctionnalités de base
 date: 2023-09-03 10:00:00
 categories: [Reverse, Introduction à l'exécution symbolique avec angr]
-tags: [angr, Exécution symbolique]     # TAG names should always be lowercase
+tags: [angr, exécution symbolique]     # TAG names should always be lowercase
 author: kabeche
 toc: true
 ---

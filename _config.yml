@@ -28,9 +28,6 @@ description: >- # used by seo meta and the atom feed
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: 'https://reverse.zip'
 
-github:
-  username: Eyrollz/reverse.github.io # change to your github username
-
 twitter:
   username: ReverseZip # change to your twitter username
 
@@ -42,7 +39,6 @@ social:
   links:
     # The first element serves as the copyright owner's link
     - https://twitter.com/ReverseZip # change to your twitter homepage
-    - https://github.com/Eyrollz/reverse.github.io # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
@@ -193,3 +189,10 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+
+# Polyglot Settings
+languages: ["fr", "en"]
+default_lang: "fr"
+exclude_from_localization: ["javascript", "images", "css", "public", "assets", "sitemap.xml"]
+parallel_localization: true
+lang_from_path: true

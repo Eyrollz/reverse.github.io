@@ -2,7 +2,7 @@
 title: Partie 4 - En apprendre toujours plus
 date: 2023-09-05 10:00:00
 categories: [Reverse, Introduction à l'exécution symbolique avec angr]
-tags: [angr, Exécution symbolique]     # TAG names should always be lowercase
+tags: [angr, exécution symbolique]     # TAG names should always be lowercase
 author: kabeche
 toc: true
 ---

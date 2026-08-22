@@ -1,9 +1,10 @@
 ---
 layout: page
-title: Accueil
+title: Home
 order: 1
 ---
 
+{% if site.active_lang == "fr" %}
 # Bienvenue !
 
 L'objectif de ce site est le partage de connaissances autour du **reverse** (alias rétro-ingénierie 🇫🇷).
@@ -28,12 +29,52 @@ Sur ce, bonne lecture 📖 !
 
 ## ✅ Cours disponibles
 
-- [Introduction au pwn](https://reverse.zip/categories/introduction-au-pwn/) (30 chapitres)
-- [Exploitation de la heap](https://reverse.zip/categories/exploitation-de-la-heap/) (24 chapitres)
-- [Introduction au reverse](https://reverse.zip/categories/introduction-au-reverse/) (25 chapitres)
-- [Introduction à l'exécution symbolique avec angr](https://reverse.zip/categories/introduction-%C3%A0-l-ex%C3%A9cution-symbolique-avec-angr/) (5 chapitres)
+- [Introduction au pwn](/categories/introduction-au-pwn/) (30 chapitres)
+- [Exploitation de la heap](/categories/exploitation-de-la-heap/) (24 chapitres)
+- [Introduction au reverse](/categories/introduction-au-reverse/) (25 chapitres)
+- [Introduction à l'exécution symbolique avec angr](/categories/introduction-%C3%A0-l-ex%C3%A9cution-symbolique-avec-angr/) (5 chapitres)
 
 ## ⚒️ Cours à venir
 
 - L'analyse d'applications Android 
 - L'analyse de *malwares*
+
+
+{% elsif site.active_lang == "en" %}
+# Welcome!
+
+The goal of this site is to share knowledge about **reverse engineering**.
+
+*Reverse engineering* is used in many areas:
+
+- *Malware* analysis
+- Vulnerability research and exploitation
+- *Modding*
+- Emulation
+- Low-level debugging
+- *Forensic* analysis
+
+Unfortunately, reverse engineering can also be used to **crack** programs (games, licenses ...). Although starting with small *crackmes* can be interesting when getting into reverse engineering, you should know that cracking proprietary programs is **illegal**.
+
+> Under **no circumstances** is the content provided on this site intended to be used for **illegal**, **immoral**, or **unethical** purposes 😶.
+{: .prompt-danger }
+
+If you are interested in **sharing content** on the platform, feel free to contact us 😜!
+
+With that, happy reading 📖!
+
+## ✅ Available courses
+
+- [Introduction to symbolic execution with angr](/en/categories/introduction-to-symbolic-execution-with-angr/) (5 chapters)
+
+## 🇫🇷 ➡️ 🇬🇧 Upcoming translations
+
+- [Introduction to pwn](/categories/introduction-au-pwn/) (30 chapters) 
+- [Heap exploitation](/categories/exploitation-de-la-heap/) (24 chapters)
+- [Introduction to reverse engineering](/categories/introduction-au-reverse/) (25 chapters)
+
+## ⚒️ Upcoming courses
+
+- Android application analysis 
+- *Malware* analysis
+{% endif %}

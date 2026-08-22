@@ -2,7 +2,7 @@
 title: Partie 5 - Solutions des exercices
 date: 2023-09-06 10:00:00
 categories: [Reverse, Introduction à l'exécution symbolique avec angr]
-tags: [angr, Exécution symbolique]
+tags: [angr, exécution symbolique]
 author: kabeche
 toc: true
 ---
