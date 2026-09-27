@@ -153,7 +153,7 @@ Nous avons notamment vu :
 
 Tout d'abord, cette instruction ne s'applique que sur le registre `eax` (ou ses dérivées). C'est pourquoi elle ne dispose pas d'opérandes. De plus, cette instruction garde le signe de l'ancienne valeur lors de la conversion vers la nouvelle valeur.
 
-En x86_64 on a des registres de 64 octets, ce qui n'est pas le cas en x86. Ainsi, pour doubler la taille des données contenues dans `eax`, c'est le registre `edx` (ou ses dérivées) qui va être utilisé de cette manière :
+En x86_64 on a des registres de 64 bits, ce qui n'est pas le cas en x86. Ainsi, pour doubler la taille des données contenues dans `eax`, c'est le registre `edx` (ou ses dérivées) qui va être utilisé de cette manière :
 
 - si le nombre dans `eax` est **négatif** (bit de poids fort égal à `1`), alors `edx` est rempli de `1`
 - si le nombre dans `eax` est **positif** (bit de poids fort égal à `0`), alors `edx` est rempli de `0`
